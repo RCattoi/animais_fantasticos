@@ -9,11 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.className += ' js'</script>
   <title>Animais fantásticos</title>
 </head>
 
 <body>
-  <nav class="menu">
+  <nav class="menu js-menu">
     <ul>
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">Faq</a></li>
@@ -32,7 +33,7 @@
       <li><img src="/img/imagem6.jpg" alt=""></li>
     </ul>
     <div class="animais-descricao js-tabContent">
-      <section>
+      <section class="active">
         <h2>Raposa</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas voluptates omnis. Laudantium soluta, perferendis sed voluptatum tenetur officia similique, ipsam dignissimos optio architecto facere dolor ducimus quis accusamus dolorem.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas voluptates omnis. Laudantium soluta, perferendis sed voluptatum tenetur officia similique, ipsam dignissimos optio architecto facere dolor ducimus quis accusamus dolorem.</p>
@@ -66,7 +67,7 @@
   </div>
   <section class="grid-section faq" id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista">
+    <dl class="faq-lista js-accordion">
       <dt>Qual a idade dos animais?</dt>
       <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui temporibus autem minus architecto dolorum velit provident eaque eos ipsa accusamus ipsum maiores nobi</dd>
       <dt>Eles são fantásticos?</dt>
