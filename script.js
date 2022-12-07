@@ -37,17 +37,35 @@ function initAccordionList() {
   }
 }
 initAccordionList();
+function initScrollSuave() {
+  const linksInternos = document.querySelectorAll(".js-menu a[href^='#']");
 
-const linksInternos = document.querySelectorAll(".js-menu a[href^='#']");
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(href);
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
-function scrollToSection(event) {
-  event.preventDefault();
-  const href = event.currentTarget.getAttribute("href");
-  const section = document.querySelector(href);
-  console.log(href, section);
-  window.scrollTo(0);
+  linksInternos.forEach((item) => {
+    item.addEventListener("click", scrollToSection);
+  });
 }
-
-linksInternos.forEach((item) => {
-  item.addEventListener("click", scrollToSection);
-});
+initScrollSuave();
+function initAnimaScroll() {
+  const section = document.querySelectorAll(".js-scroll");
+  if (section.length) {
+    function animatedScroll() {
+      section.forEach((item) => {
+        const screenHeight = window.innerHeight * 0.6;
+        const sectionTop = item.getBoundingClientRect().top;
+        const isSectionVisible = sectionTop - screenHeight;
+        if (isSectionVisible < 0) {
+          item.classList.add("animar");
+        }
+      });
+    }
+    window.addEventListener("scroll", animatedScroll);
+  }
+}
+initAnimaScroll();
