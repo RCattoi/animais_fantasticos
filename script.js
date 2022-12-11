@@ -69,3 +69,30 @@ function initAnimaScroll() {
   }
 }
 initAnimaScroll();
+
+function DomSelector(selector) {
+  this.htmlObject = selector;
+  this.element = function () {
+    return document.querySelectorAll(this.htmlObject);
+  };
+  this.addInHtmlObject = function () {
+    this.element().classList.add("active");
+  };
+}
+
+// Transforme o objeto abaixo em uma Constructor Function
+const pessoa = {
+  nome: "Nome pessoa",
+  idade: 0,
+  andar() {
+    console.log(this.nome + " andou");
+  },
+};
+
+function Pessoa(nome, idade) {
+  this.nome = nome;
+  this.idade = idade;
+  this.andar = function () {
+    console.log(this.nome + " andou");
+  };
+}
