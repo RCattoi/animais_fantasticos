@@ -235,7 +235,8 @@ footer p {
 .js .js-tabContent section {
   display: none;
 }
-.js-tabContent section.active {
+
+.js-tabContent section.active section.show-right {
   display: block !important;
   animation: show 0.7s;
 }

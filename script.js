@@ -5,9 +5,12 @@ function initTabNav() {
   if (tabMenu.length && tabContent.length) {
     function activeTab(index) {
       tabContent.forEach((section) => {
-        section.classList.remove("active");
+        section.classList.remove("active", "show-down", "show-right");
       });
       tabContent[index].classList.add("active");
+      tabContent[index].dataset.anime === "show-down"
+        ? tabContent[index].classList.add("show-down")
+        : tabContent[index].classList.add("show-right");
     }
 
     tabMenu.forEach((itemMenu, index) => {
@@ -77,22 +80,5 @@ function DomSelector(selector) {
   };
   this.addInHtmlObject = function () {
     this.element().classList.add("active");
-  };
-}
-
-// Transforme o objeto abaixo em uma Constructor Function
-const pessoa = {
-  nome: "Nome pessoa",
-  idade: 0,
-  andar() {
-    console.log(this.nome + " andou");
-  },
-};
-
-function Pessoa(nome, idade) {
-  this.nome = nome;
-  this.idade = idade;
-  this.andar = function () {
-    console.log(this.nome + " andou");
   };
 }
