@@ -1,6 +1,6 @@
 function initTabNav() {
-  const tabMenu = document.querySelectorAll(".js-tabMenu img");
-  const tabContent = document.querySelectorAll(".js-tabContent section");
+  const tabMenu = document.querySelectorAll(".js-tabMenu img"),
+    tabContent = document.querySelectorAll(".js-tabContent section");
 
   if (tabMenu.length && tabContent.length) {
     function activeTab(index) {
