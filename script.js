@@ -1,13 +1,15 @@
 function initTabNav() {
-  const tabMenu = document.querySelectorAll(".js-tabMenu img");
-  const tabContent = document.querySelectorAll(".js-tabContent section");
+  const tabMenu = document.querySelectorAll(".js-tabMenu img"),
+    tabContent = document.querySelectorAll(".js-tabContent section");
 
   if (tabMenu.length && tabContent.length) {
     function activeTab(index) {
       tabContent.forEach((section) => {
-        section.classList.remove("active");
+        section.classList.remove("show-down", "show-right");
       });
-      tabContent[index].classList.add("active");
+      tabContent[index].dataset.anime === "show-down"
+        ? tabContent[index].classList.add("show-down")
+        : tabContent[index].classList.add("show-right");
     }
 
     tabMenu.forEach((itemMenu, index) => {
@@ -17,6 +19,7 @@ function initTabNav() {
     });
   }
 }
+
 initTabNav();
 
 function initAccordionList() {
@@ -96,6 +99,3 @@ function Pessoa(nome, idade) {
     console.log(this.nome + " andou");
   };
 }
-
-const email = "rodrigo.costa@hurb.com";
-console.log(email.endsWith("@hurb.com"));
