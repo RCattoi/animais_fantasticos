@@ -96,3 +96,6 @@ function Pessoa(nome, idade) {
     console.log(this.nome + " andou");
   };
 }
+
+const email = "rodrigo.costa@hurb.com";
+console.log(email.endsWith("@hurb.com"));
