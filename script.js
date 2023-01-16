@@ -5,9 +5,8 @@ function initTabNav() {
   if (tabMenu.length && tabContent.length) {
     function activeTab(index) {
       tabContent.forEach((section) => {
-        section.classList.remove("active", "show-down", "show-right");
+        section.classList.remove("show-down", "show-right");
       });
-      tabContent[index].classList.add("active");
       tabContent[index].dataset.anime === "show-down"
         ? tabContent[index].classList.add("show-down")
         : tabContent[index].classList.add("show-right");
@@ -20,6 +19,7 @@ function initTabNav() {
     });
   }
 }
+
 initTabNav();
 
 function initAccordionList() {
