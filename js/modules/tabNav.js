@@ -1,4 +1,4 @@
-export default git statusfunction initTabNav() {
+export default function initTabNav() {
   const tabMenu = document.querySelectorAll("[data-js='js-tabMenu'] img"),
     tabContent = document.querySelectorAll("[data-js='js-tabContent'] section");
 
