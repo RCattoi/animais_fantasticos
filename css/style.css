@@ -232,11 +232,11 @@ footer p {
   cursor: pointer;
 }
 
-.js .js-tabContent section {
+.js [data-js="js-tabContent"] section {
   display: none;
 }
 
-.js-tabContent section.show-right {
+[data-js="js-tabContent"] section.show-right {
   display: block !important;
   animation: showSlideRight 0.7s;
 }
@@ -252,7 +252,7 @@ footer p {
   }
 }
 
-.js-tabContent section.show-down {
+[data-js="js-tabContent"] section.show-down {
   display: block !important;
   animation: showSlideDown 0.7s;
 }
@@ -268,24 +268,24 @@ footer p {
   }
 }
 
-.js .js-accordion dd {
+.js [data-js="js-accordion"] dd {
   display: none;
 }
 
-.js-accordion dd.active {
+[data-js="js-accordion"] dd.active {
   display: block;
   animation: slideDown 0.3s forwards;
 }
 
-.js-accordion dt {
+[data-js="js-accordion"] dt {
   cursor: pointer;
 }
-.js-accordion dt::after {
+[data-js="js-accordion"] dt::after {
   content: "⬎";
   margin-left: 10px;
 }
 
-.js-accordion dt.active::after {
+[data-js="js-accordion"] dt.active::after {
   content: "⬏";
   margin-left: 10px;
 }
@@ -301,13 +301,13 @@ footer p {
   }
 }
 
-.js .js-scroll {
+.js [data-js="js-scroll"] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
   transition: 0.3s;
 }
 
-.js .js-scroll.animar {
+.js [data-js="js-scroll"].animar {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }

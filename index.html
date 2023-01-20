@@ -8,13 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <script>document.documentElement.className += ' js'</script>
   <title>Animais fantásticos</title>
 </head>
 
 <body>
-  <nav class="menu js-menu">
+  <nav data-js="js-menu" class="menu js-menu">
     <ul>
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">Faq</a></li>
@@ -22,9 +22,9 @@
       <li><a href="https://www.origamid.com">Dev →</a></li>
     </ul>
   </nav>
-  <section class="grid-section animais js-scroll" id="animais">
+  <section data-js="js-scroll" class="grid-section animais js-scroll" id="animais">
     <h1 class="titulo">Animais Fantásticos</h1>
-    <ul class="animais-lista js-tabMenu">
+    <ul data-js="js-tabMenu" class="animais-lista js-tabMenu">
       <li><img src="/img/imagem1.jpg" alt=""></li>
       <li><img src="/img/imagem2.jpg" alt=""></li>
       <li><img src="/img/imagem3.jpg" alt=""></li>
@@ -32,7 +32,7 @@
       <li><img src="/img/imagem5.jpg" alt=""></li>
       <li><img src="/img/imagem6.jpg" alt=""></li>
     </ul>
-    <div class="animais-descricao js-tabContent ">
+    <div data-js="js-tabContent" class="animais-descricao js-tabContent">
       <section data-anime="show-down" class="show-down">
         <h2>Raposa</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas voluptates omnis. Laudantium soluta, perferendis sed voluptatum tenetur officia similique, ipsam dignissimos optio architecto facere dolor ducimus quis accusamus dolorem.</p>
@@ -65,9 +65,9 @@
       </section>
   </section>
   </div>
-  <section class="grid-section faq js-scroll" id="faq">
+  <section data-js="js-scroll" class="grid-section faq js-scroll" id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista js-accordion">
+    <dl data-js="js-accordion" class="faq-lista js-accordion">
       <dt>Qual a idade dos animais?</dt>
       <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui temporibus autem minus architecto dolorum velit provident eaque eos ipsa accusamus ipsum maiores nobi</dd>
       <dt>Eles são fantásticos?</dt>
@@ -79,7 +79,7 @@
     </dl>
   </section>
 
-  <section class="grid-section contato js-scroll" id="contato">
+  <section data-js="js-scroll" class="grid-section contato js-scroll" id="contato">
     <h1 class="titulo">Contato</h1>
     <div class="mapa">
       <!-- <img src="./img/mapa.png" alt=""> -->
@@ -95,8 +95,8 @@
   <footer class="copy">
     <p>Todos os direitos reservados.</p>
   </footer>
-  <script src="script.js"></script>
-  <script src="scriptaulastring.js"></script>
+  <script type="module" src="./script.js"></script>
+  <!-- <script src="scriptaulastring.js"></script> -->
 </body>
 
 </html>
