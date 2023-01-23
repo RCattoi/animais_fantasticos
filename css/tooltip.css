@@ -1,0 +1,16 @@
+.tooltip {
+  position: absolute;
+  /* z-index: -1; */
+  background: rgba(255, 187, 85, 0.6);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 0.5rem;
+  font-family: monospace;
+  font-weight: bold;
+  max-width: 150px;
+  font-size: 0.875rem;
+  border-radius: 5px;
+  top: -1px;
+  display: none;
+}

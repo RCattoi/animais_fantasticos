@@ -1,7 +1,7 @@
 .modal-container {
   height: 100vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
   position: fixed;
   top: 0;
   left: 0;
@@ -13,6 +13,7 @@
 
 .modal-container__panel {
   background-color: white;
+  min-width: 300px;
   padding: 40px;
   border: 10px solid #fb5;
   -webkit-box-shadow: 0px 0px 38px 7px #fb5;
@@ -32,7 +33,68 @@
   right: -30px;
   border-radius: 50%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
-]
-.modal-container__fechar:hover {
+  background: #e54;
+  font-size: 1.2rem;
+  color: white;
   cursor: pointer;
+  font-family: monospace;
+}
+
+.modal-container label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  display: block;
+  margin: 1rem 0rem 0.5rem 0rem;
+}
+
+.modal-container input {
+  width: 100%;
+  padding: 0.7rem 0.5rem;
+  box-sizing: border-box;
+}
+.modal-container button[type="submit"] {
+  display: block;
+  border-radius: 5px;
+  background-color: #e54;
+  border: 4px #e54 solid;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+.modal-container button[type="submit"]:hover,
+.modal-container button[type="submit"]:focus {
+  border: 4px #fb5 solid;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+[data-modal-control="container-abrir"] {
+  animation: scale-up-center 0.3s forwards;
+  display: flex;
+}
+[data-modal-control="container-fechar"] {
+  display: none;
 }
