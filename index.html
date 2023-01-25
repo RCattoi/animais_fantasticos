@@ -17,15 +17,29 @@
   <div class="grid-container">
     <nav data-js="js-menu" class="menu js-menu">
       <ul>
-        <li><a href="#animais">Animais</a></li>
+        <li>
+          <a href="#animais">Animais</a>
+        </li>
+        <li data-dropdown>
+          <a href="sobre.html">Sobre</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="empresa.html">Empresa</a>
+            </li>
+            <li> <a href="equipe.html">Equipe</a></li>
+            <li> <a href="Sócios.html">Sócios</a></li>
+            <li> <a href="Investidores.html">Investidores</a></li>
+          </ul>
+        </li>
         <li><a href="#faq">Faq</a></li>
         <li><a href="#contato">Contato</a></li>
         <li><a href="https://www.origamid.com">Dev →</a></li>
+        <li> <a href="" class="menulogin">login</a></li>
       </ul>
     </nav>
     <section data-js="js-scroll" class="grid-section animais js-scroll" id="animais">
       <h1 class="titulo">Animais Fantásticos</h1>
-      <ul data-js="js-tabMenu" class="animais-lista js-tabMenu">
+      <ul data-js="js-tabMenu" data-tooltip aria-label="Clique na imagem para alterar o texto." class="animais-lista js-tabMenu">
         <li><img src="/img/imagem1.jpg" alt=""></li>
         <li><img src="/img/imagem2.jpg" alt=""></li>
         <li><img src="/img/imagem3.jpg" alt=""></li>
@@ -97,7 +111,7 @@
       <p>Todos os direitos reservados.</p>
     </footer>
   </div>
-  <section class="modal-container" data-modal="container">
+  <section class="modal-container" data-modal="container" data-modal-control="container-fechar">
     <div class="modal-container__panel">
       <button data-modal="fechar" class="modal-container__fechar">X</button>
       <form action="">
@@ -106,9 +120,13 @@
         <label for="senha">Senha</label>
         <input type="password" for="senha" id="senha">
       </form>
+      <button type="submit">Entrar</button>
     </div>
   </section>
   <script type="module" src="./script.js"></script>
+  <div class="tooltip">
+
+  </div>
   <!-- <script src="scriptaulastring.js"></script> -->
 </body>
 
