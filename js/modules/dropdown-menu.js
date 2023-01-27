@@ -1,8 +1,8 @@
 export default function dropdownMenu() {
   const dropdownMenu = document.querySelectorAll("[data-dropdown]");
+  const html = document.documentElement;
 
   dropdownMenu.forEach((menu) => {
-    // element.addEventListener("touchstart", handleClick);
     ["touchstart", "click"].forEach((userEvent) => {
       menu.addEventListener(userEvent, handleClick);
     });
@@ -10,7 +10,15 @@ export default function dropdownMenu() {
 
   function handleClick(event) {
     event.preventDefault();
-    console.log(event);
-    // return (dropdownMenu.style.display = "block");
+    this.classList.toggle("ativo");
+    clickHtml();
+  }
+
+  function clickHtml() {
+    html.addEventListener("click", handleHtmlClick);
+    function handleHtmlClick(event) {
+      console.log(event);
+      console.log(event.target);
+    }
   }
 }
