@@ -4,7 +4,7 @@ import initAnimaScroll from "./js/modules/scroll-animacao.js";
 import initAccordionList from "./js/modules/accordion.js";
 import initTabNav from "./js/modules/tabNav.js";
 import initTooltip from "./js/modules/tooltip.js";
-// import initTooltip from "./js/modules/tooltip.js";
+import dropdownMenu from "./js/modules/dropdown-menu.js";
 
 openLoginModal();
 initScrollSuave();
@@ -12,3 +12,4 @@ initAnimaScroll();
 initAccordionList();
 initTabNav();
 initTooltip();
+dropdownMenu();
