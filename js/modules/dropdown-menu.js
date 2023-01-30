@@ -10,15 +10,23 @@ export default function dropdownMenu() {
 
   function handleClick(event) {
     event.preventDefault();
-    this.classList.toggle("ativo");
-    clickHtml();
+    this.classList.add("ativo");
+    clickHtml(this, () => {
+      this.classList.remove("ativo");
+    });
   }
 
-  function clickHtml() {
-    html.addEventListener("click", handleHtmlClick);
+  function clickHtml(element, callback) {
+    const outside = "data-outside";
+    if (!element.hasAttribute(outside)) {
+      html.addEventListener("click", handleHtmlClick);
+      element.setAttribute(outside, "");
+    }
     function handleHtmlClick(event) {
-      console.log(event);
-      console.log(event.target);
+      if (!element.contains(event.target)) {
+        callback();
+        html.removeEventListener("click", handleHtmlClick);
+      }
     }
   }
 }
