@@ -1,8 +1,8 @@
-export default function dropdownMenu() {
-  const dropdownMenu = document.querySelectorAll("[data-dropdown]");
-  const html = document.documentElement;
+import outsideClick from "./outsideclick.js";
 
-  dropdownMenu.forEach((menu) => {
+export default function initDropdownMenu() {
+  const dropdownMenus = document.querySelectorAll("[data-dropdown]");
+  dropdownMenus.forEach((menu) => {
     ["touchstart", "click"].forEach((userEvent) => {
       menu.addEventListener(userEvent, handleClick);
     });
@@ -11,22 +11,8 @@ export default function dropdownMenu() {
   function handleClick(event) {
     event.preventDefault();
     this.classList.add("ativo");
-    clickHtml(this, () => {
+    outsideClick(this, ["touchstart", "click"], () => {
       this.classList.remove("ativo");
     });
-  }
-
-  function clickHtml(element, callback) {
-    const outside = "data-outside";
-    if (!element.hasAttribute(outside)) {
-      html.addEventListener("click", handleHtmlClick);
-      element.setAttribute(outside, "");
-    }
-    function handleHtmlClick(event) {
-      if (!element.contains(event.target)) {
-        callback();
-        html.removeEventListener("click", handleHtmlClick);
-      }
-    }
   }
 }
