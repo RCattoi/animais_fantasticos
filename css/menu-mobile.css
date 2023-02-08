@@ -19,6 +19,11 @@
     position: relative;
     z-index: 2;
   }
+
+  .js [data-menu="button"].active::before {
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
   .js [data-menu="button"]::before {
     content: "";
     margin-right: 5px;
@@ -29,19 +34,32 @@
     box-shadow: 0 4px #fff, 0 -4px #fff;
   }
   .js [data-menu="list"] {
-    /* display: none; */
-    display: block;
+    display: none;
     position: absolute;
     background: #fb5;
     width: 160px;
     z-index: 1;
-    top: 32px;
+    top: 22px;
     padding: 60px 0 20px 0;
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
   }
+  .js [data-menu="list"].active {
+    display: block;
+    animation: slide-top 0.3s forwards;
+  }
+
   .js .dropdown-menu {
     position: static;
     border: none;
-    margin-top: 10px;
+    margin-top: -8px;
+  }
+
+  @keyframes slide-top {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(10px);
+    }
   }
 }
