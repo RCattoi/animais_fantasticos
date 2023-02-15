@@ -8,6 +8,8 @@ export default function initAnimaScroll() {
         const isSectionVisible = sectionTop - screenHeight;
         if (isSectionVisible < 0) {
           item.classList.add("animar");
+        } else if (item.classList.contains("animar")) {
+          item.classList.remove("animar");
         }
       });
     }

@@ -24,6 +24,11 @@
     transform: rotate(90deg);
     transition: transform 0.3s;
   }
+
+  .js [data-menu="button"]::before {
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+  }
   .js [data-menu="button"]::before {
     content: "";
     margin-right: 5px;

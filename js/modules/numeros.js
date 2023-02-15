@@ -1,5 +1,5 @@
 export default function initAnimaNumeros() {
-  function aanimaNumeros() {
+  function animaNumeros() {
     const numeros = document.querySelectorAll(".numeros-animal span");
     let timer;
     function animacaoNumero(animalValor, item) {
@@ -10,7 +10,7 @@ export default function initAnimaNumeros() {
         item.innerHTML = contador;
         contador = contador + incremento;
         if (contador > animalValor) {
-          item.innerHTML = animalValor;
+          contador = animalValor;
           clearInterval(timer);
         }
       }, 25 * Math.random());
@@ -20,13 +20,13 @@ export default function initAnimaNumeros() {
       animacaoNumero(numerosValor, item);
     });
   }
-}
-function handleMutation(mutation) {
-  if (mutation[0].target.classList.contains("animar")) {
-    aanimaNumeros();
-    observer.disconnect;
-  }
 
+  function handleMutation(mutation) {
+    if (mutation[0].target.classList.contains("animar")) {
+      animaNumeros();
+      observer.disconnect();
+    }
+  }
   const observerTarget = document.querySelector(".numeros");
   const observer = new MutationObserver(handleMutation);
 
