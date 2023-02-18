@@ -1,20 +1,43 @@
 <html>
 
 <body>
-  <section>
+  <style>
+    label {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      margin-bottom: .5rem;
+      margin-top: 1rem;
+    }
 
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
 
-    <p>0</p>
-    <button class="iniciar">
-      Iniciar
-    </button>
-    <button class="pausar">
-      Pausar
-    </button>
-    <button class="resetar">
-      Resetar
-    </button>
-  </section>
+    input,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: .5rem;
+      border: 2px solid #000;
+      font-size: 1rem;
+      margin-bottom: .5rem;
+    }
+
+    textarea {
+      height: 150px;
+    }
+  </style>
+  <form name="contato" id="contato">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
+    <label for="mensagem">Mensagem</label>
+    <textarea name="mensagem" id="mensagem"></textarea>
+  </form>
+
 
   <script src="./scriptaulastring.js"></script>
 </body>

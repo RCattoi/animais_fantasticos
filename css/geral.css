@@ -183,6 +183,30 @@ body {
   margin-right: 10px;
   background: #fb5;
 }
+[data-semana] {
+  display: flex;
+  align-items: center;
+}
+[data-semana].fechado::after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-color: #e54;
+  border-radius: 50%;
+  margin-left: 3px;
+  border: 2px solid #000;
+}
+
+[data-semana].aberto::after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-color: rgb(87, 241, 108);
+  border-radius: 50%;
+  margin-left: 3px;
+}
 
 footer {
   grid-column: 3/5;
