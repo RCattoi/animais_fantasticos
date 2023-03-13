@@ -1,6 +1,9 @@
 <html>
 
 <body>
+  <div class="poke">
+    <img src="" alt="">
+  </div>
   <style>
     label {
       display: block;
@@ -30,16 +33,27 @@
     }
   </style>
   <form name="contato" id="contato">
-    <label for="nome">Nome</label>
-    <input type="text" name="nome" id="nome">
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email">
-    <label for="mensagem">Mensagem</label>
-    <textarea name="mensagem" id="mensagem"></textarea>
+    <label for="cep">CEP</label>
+    <input name="cep" id="cep" type="text" name="nome" id="nome">
+    <label for="rua">Rua</label>
+    <input type="text" name="rua" id="rua">
+    <label for="complemento">Complemento</label>
+    <input type="text" name="complemento" id="complemento">
+    <label for="bairro">Bairro</label>
+    <input type="text" name="bairro" id="bairro">
+    <label for="cidade">Cidade</label>
+    <input type="text" name="cidade" id="cidade">
+    <label for="estado">Estado</label>
+    <input type="text" name="estado" id="estado">
+    <input calss="form__buscar" type="button" value="Buscar">
   </form>
-
-
+  <span> Para comprar 1 bitcoin com real você precisará de <span class="bitcoinValue"></span></span>
+  <br>
+  <br>
+  <button class="cn">Chuck Norris</button>
+  <div class="joke"></div>
   <script src="./scriptaulastring.js"></script>
 </body>
+
 
 </html>
